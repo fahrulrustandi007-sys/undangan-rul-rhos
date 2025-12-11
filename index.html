@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>The Wedding of Fachrul & Rhossyana</title>
+
+<style>
+  body {
+    margin: 0;
+    font-family: "Playfair Display", serif;
+    background: #f7f2ec;
+    overflow-x: hidden;
+  }
+
+  /* --------------------- OPENING WRAPPER -------------------- */
+  .hero {
+    position: relative;
+    height: 100vh;
+    width: 100%;
+    overflow: hidden;
+  }
+
+  /* --------------------- FOTO ZOOM CINEMATIC -------------------- */
+  .hero img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+
+    /* Start from detailed zoom -> zoom out */
+    transform: scale(1.4);
+    animation: zoomOut 3s ease-out forwards;
+  }
+
+  @keyframes zoomOut {
+    0% { transform: scale(1.4); }
+    100% { transform: scale(1); }
+  }
+
+  /* --------------------- TEKS OPENING -------------------- */
+  .text-overlay {
+    position: absolute;
+    bottom: 15%;
+    width: 100%;
+    text-align: center;
+    color: #ffffff;
+    text-shadow: 0px 5px 18px rgba(0,0,0,0.6);
+    opacity: 0;
+    animation: fadeUp 2.5s ease-out forwards;
+    animation-delay: 0.8s;
+  }
+
+  @keyframes fadeUp {
+    0% {
+      opacity: 0;
+      transform: translateY(25px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  .title {
+    font-size: 34px;
+    margin: 0;
+    letter-spacing: 1px;
+  }
+
+  .subtitle {
+    font-size: 18px;
+    margin-top: 10px;
+  }
+</style>
+</head>
+
+<body>
+
+<!-- ======================= OPENING SECTION ======================= -->
+<div class="hero">
+  <!-- Ganti src foto ini nanti -->
+  <img src="FOTO-PREWED-KALIAN.jpg" alt="Our Photo" />
+
+  <div class="text-overlay">
+    <h2 class="subtitle">The Wedding of</h2>
+    <h1 class="title">Moch Fachrul Rustandi<br>&<br>Rhossyana Fauziah Maharani</h1>
+  </div>
+</div>
+
+</body>
+</html>
